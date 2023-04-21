@@ -1,0 +1,2 @@
+【2-10実行結果】
+The area of the circle is 50.26548245743669 and the circumference is 25.132741228718345
