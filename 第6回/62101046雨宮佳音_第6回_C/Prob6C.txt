@@ -1,0 +1,10 @@
+62101046 雨宮佳音
+
+【6-6-5】
+RectVertexクラス、CrossVertexクラス、HexVertexクラスはそれぞれ、抽象クラスVertexを継承している。
+抽象クラスの抽象メソッドは子クラスで必ずオーバーライドしなければならないが、今回はdrawメソッドが抽象メソッドとなっており、
+RectVertexクラス、CrossVertexクラス、HexVertexクラスそれぞれで、drawメソッドをオーバーライドしている。
+「draw(Turtle t, Vertex v)」が実行されるときに、第2実引数の型がRectVertexクラスであれば、仮引数vはRectVertexクラスとなり、
+そのRectVertexクラスの変数に対してdrawメソッドが実行されると、RectVertexクラスのdrawメソッドが呼び出される。
+CrossVertexクラス、HexVertexクラスについても同じようにメソッドが呼び出される。
+これにより、頂点として正方形を描く場合、十字を描く場合、六角形を描く場合のそれぞれについて、プログラムが期待したとおりに動作する。

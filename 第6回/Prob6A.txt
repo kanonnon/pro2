@@ -1,0 +1,54 @@
+62101046 雨宮佳音
+
+【6-1】
+a) true
+b) false
+c) true
+d) true
+e) true
+f) true
+
+a) クラスAのインスタンスについて、それがクラスAであるかを確認しているため、trueであることは自明。
+b) クラスAはクラスBを継承しているわけではないので、クラスAのインスタンスはクラスBではなく、falseとなる。
+c) クラスBはクラスAを継承しているので、クラスBのインスタンスはクラスAの性質も持っているため、trueとなる。
+d) クラスBのインスタンスについて、それがクラスBであるかを確認しているため、trueであることは自明。
+e) JavaのすべてのクラスはObjectクラスを継承しているため、クラスAのインスタンスはObjectクラスの性質も持ち、trueとなる。
+f) JavaのすべてのクラスはObjectクラスを継承しているため、クラスBのインスタンスはObjectクラスの性質も持ち、trueとなる。
+
+【6-2】
+キーワードfinalによって、サブクラスでのmethodXメソッドのオーバーライドを禁止しているのに、
+クラスAのサブクラスであるクラスBにて、methodXメソッドをオーバーライドしようとしているため、エラーが発生する。
+
+【6-3-1】
+W is called
+Y is called
+Z is called
+X is called
+I is shown
+Z is called
+Z is shown
+
+「testClass(w);」によって、クラスWの変数wを引数として、testClassメソッドが呼ばれる。
+変数wに対してshowMessageメソッドが実行されて、クラスWのshowMessageメソッドが呼ばれ、「W is called」が出力される。
+
+「testClass(y);」によって、クラスYの変数yを引数として、testClassメソッドが呼ばれる。
+ここで、クラスYはクラスWを継承しているため、引数の型指定がクラスWであるがエラーは起こらない。
+変数yに対してshowMessageメソッドが実行されて、クラスYのshowMessageメソッドが呼ばれ、「Y is called」が出力される。
+
+「testClass(z);」によって、クラスZの変数zを引数として、testClassメソッドが呼ばれる。
+ここで、クラスZはクラスWを継承しているクラスYを継承しているため、引数の型指定がクラスWであるがエラーは起こらない。
+変数zに対してshowMessageメソッドが実行されて、クラスZのshowMessageメソッドが呼ばれ、「Z is called」が出力される。
+
+「testInterface(x);」によって、クラスXの変数xを引数として、testInterfaceメソッドが呼ばれる。
+ここで、クラスXはインターフェースIを実装しているため、引数の型指定がクラスIであるがエラーは起こらない。
+変数xに対してshowMessageメソッドが実行されて、クラスXのshowMessageメソッドが呼ばれ、「X is called」が出力される。
+また、変数xに対してshowメソッドが実行されて、クラスXのshowメソッドが呼ばれようとするが存在しないため、Iクラスのshowメソッドが呼ばれて、「I is shown」が出力される。
+
+「testInterface(z);」によって、クラスZの変数zを引数として、testInterfaceメソッドが呼ばれる。
+ここで、クラスZはインターフェースIを実装しているため、引数の型指定がクラスIであるがエラーは起こらない。
+変数zに対してshowMessageメソッドが実行されて、クラスZのshowMessageメソッドが呼ばれ、「Z is called」が出力される。
+また、変数zに対してshowメソッドが実行されて、クラスZのshowメソッドが呼ばれ、「Z is shown」が出力される。
+
+【6-3-2】
+クラスXはクラスWを継承していないため、クラスWの性質を持っていない。
+しかし、testClassメソッドを呼ぶと、その引数の型はクラスWに指定されているため、それに反してエラーが発生してしまう。

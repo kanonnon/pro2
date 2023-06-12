@@ -1,0 +1,45 @@
+【7-2】
+(a)
+PointクラスのgetX()メソッドはアクセス修飾子が何もついていないので、同一パッケージ内のクラスのメソッドからのみアクセス可能である。
+しかし、Pointクラスが含まれるパッケージとは異なるパッケージにあるA1クラスのメソッド内で呼ばれているため、アクセス制限に違反している。
+
+(b)
+Pointクラスのインスタンス変数yはprivate修飾子がついているため、同一クラス内のメソッドからのみアクセス可能である。
+しかし、Pointクラスとは異なるクラスであるPoint3DクラスのmoveY()メソッドから、yに直接アクセスして値の変更をしているため、アクセス制限に違反している。
+
+(c)
+PointクラスのgetX()メソッドはアクセス修飾子が何もついていないので、同一パッケージ内のクラスのメソッドからのみアクセス可能である。
+ColorPointクラスはPointクラスのサブクラスであるが同一パッケージではない。
+Pointクラスが含まれるパッケージとは異なるパッケージにあるColorPointクラスのメソッド内で呼ばれているため、アクセス制限に違反している。
+
+【7-3】
+1(a)
+Objectクラス
+
+1(b)
+outはクラス変数だが、final修飾子がついているので、定数である。
+標準出力ストリームで、出力データの受け取りが可能である。
+このストリームはディスプレイ出力、またはホスト環境やユーザーによって指定される出力先の出力と一致する。
+
+1(c)
+boolean, char, char[], double, float, int, long, java.lang.Object, java.lang.String
+
+2(a)
+Doubleクラスは、プリミティブ型doubleの値をオブジェクトにラップしている。
+doubleはただ値を持つだけの基本データ型だが、Doubleクラスはdoubleの値に対し、処理を行うようなメソッドを提供する。
+
+2(b)
+Doubleクラスの直接のスーパークラスはNumberである。
+Numberクラスの直接のサブクラスは、
+AtomicInteger, AtomicLong, BigDecimal, BigInteger, Byte, DoubleAccumulator
+DoubleAdder, FloatInteger, Long, LongAccumulator, LongAdder, Short
+である。
+
+3
+Randomクラス
+
+4
+String aNewString = aString.substring(2, 7);
+
+【7-3】
+ArrayListの要素はString型であると１行目で宣言されているのに、3行目でColor型の要素を追加しようとしているから。
